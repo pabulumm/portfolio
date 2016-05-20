@@ -66,8 +66,8 @@ $(function() {
 		$('#skills-container').animate({
 			height: "300px",
 			width: "300px",
-			left: "-=115px",
-			bottom: "-=130px"},
+			left: "-=110px",
+			bottom: "-=125px"},
 			1300, function() {
 				$('#close-skills').fadeIn(500);
 				$('#skills-container').removeClass('rotating');
@@ -85,12 +85,12 @@ $(function() {
 		$('#skills-container').animate({
 			height: "0px",
 			width: "0px",
-			left: "+=135px",
-			bottom: "+=165px"},
+			left: "+=130px",
+			bottom: "+=160px"},
 			1000, function() {
 				$('#skills-container').removeClass('skills-open').css({
-					height: "40px",
-					width: "70px",
+					height: "50px",
+					width: "80px",
 					left: "-=20px",
 					bottom: "-=35px"																
 				});
