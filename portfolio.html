@@ -1,0 +1,92 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<link rel="stylesheet" href="portfolio.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" crossorigin="anonymous">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
+	<script src="portfolio.js" defer></script>
+
+</head>
+<body>
+
+	
+
+
+	<div id="content" class="in-front">
+		<div id="name-container">
+			<h1 id="name">Tucker Stone</h1>
+		</div>
+		<div id="about-container">
+			<p>Recent Computer Science graduate.</p>
+			<p>Seeking places to work and problems to solve.</p>
+			<p>Perspective and communication above everything.</p>
+		</div>
+
+		<div id="skills-container">
+			<button id="skills-select" class="btn btn-primary">Skills</button>
+			<button id="close-skills">
+				<span class="glyphicon glyphicon-remove"></span></button>
+			<div id="skill-wrap1" style="margin-top:60px" class="skill-wrap"><p>Java. Python. C.</p></div>
+			<div id="skill-wrap2" class="skill-wrap"><p>JQuery. Javascript. HTML/CSS</p></div>
+			<div id="skill-wrap3" class="skill-wrap"><p>Django. Android. Mapbox.</p></div>
+			<div id="skill-wrap4" class="skill-wrap"><p>Photoshop. Illustrator.</p></div>
+		</div>
+
+
+		<button class="btn btn-primary contact">Contact</button>
+		<div class='contact-box'>
+			<p class="email_addr">tuckerstone16@gmail.com</p>
+			<a href="https://www.linkedin.com/in/tucker-stone-7733b0ba"><img id="linkedin-icon" src="linkedin-32.png" alt="MISSING PNG"/></a>
+		</div>
+		<button id="work-select" class="btn btn-primary">
+			Work<span class="glyphicon glyphicon-chevron-right"></span></button>
+	</div>
+
+	<div id="work-content">
+		<div id="work-list-container">
+			<div class="work-item" style="height: 25%;">
+				<div class="work-item-img" style="margin-left:30%;">
+					<img id="neighbors-img" src="rsz_home-feed-view.png"/>	
+				</div>
+				<div class="work-item-text" style="width:40%;">
+					<h2>Neighbors</h2>
+					<p>Designed and created a web application for community coordination to improve upon current Home Owner Associations. By bringing visualization, accessibility and connectivity to our local communities, neighborhoods can handle mediation and management with far more transparency.</p>
+				</div>
+			</div>
+			<div class="work-item"  style="height:35%;">
+				<div style="float:left;" class="work-item-text">
+					<h2 style="float:right;margin-right:20px;margin-top:30px">Autonomous Wall-Following Car - TI MSP432 LaunchPad</h2>
+					<p style="float:right;margin-right:20px; margin-left:20%">Designed, built and programmed this autonomous car to maintain a distance from a wall as well as evade obstacles. The bot uses Pulse Width Modulation to power the differential drive. With optical encoders we were able to implement feedback controllers maintain wheel velocity equilibrium. The same concept was applied with the use of ultrasonic sonar sensors to maintain a wall following distance.</p>
+				</div>
+				<div style="float:right;margin-top: -50px;" class="work-item-img">
+					<img id="car-img" src="rsz_car1.png"/>
+				</div>
+			</div>
+			<div class="work-item">
+				<div class="work-item-img">
+					<img id="robot-img" src="rsz_robot1.png"/>
+				</div>
+				<div class="work-item-text">
+					<h2 style="float:right;margin-right:25%;">Autonomous Vehicle - Arduino Robot Controller</h2>
+					<p style="float:right;margin-right:15%;margin-left:20%;">Designed and built an autonomous robot that can navigate through a space with obstacle avoidance. With an ultrasonic sonar sensor attached to a servo motor, the robot is able to view 180 degrees in front of the bot with only one sensor. In addition, the robot uses a "Dead Reckoning" style of odometry and a light sensor to locate points of interest making him a flexible and adaptive autonomous robot.</p>
+				</div> 
+			</div>
+		</div>
+		
+		<button class="btn btn-primary contact">Contact</button>
+		<div class="contact-box">
+			<p class="email_addr">tuckerstone16@gmail.com</p>
+			<a href="https://www.linkedin.com/in/tucker-stone-7733b0ba"><img id="linkedin-icon" src="linkedin-32.png" alt="MISSING PNG"/></a>
+		</div>
+		<button id="about-select" class="btn btn-primary">
+			<span class="glyphicon glyphicon-chevron-left"></span>About</button>	
+	</div>
+
+	
+
+</body>
+</html>

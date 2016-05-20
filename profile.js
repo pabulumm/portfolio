@@ -4,7 +4,7 @@ $(function() {
 
 	$('#bio-select').click(function() {
 		console.log('Clicked BIO link');
-		// $('#bio-content').slideUp(1000);
+		$('#bio-content').slideUp(1000);
 		if (!$('#bio-content').hasClass('selected')) {
 			$('.selected').slideUp('fast', "swing").removeClass('selected');
 			$('#bio-content').slideDown("slow", "swing").addClass('selected');
@@ -21,9 +21,5 @@ $(function() {
 	})
 
 
-	$('#skills-select').click(function() {
-		console.log('Clicked SKILLS link');
-		
-	})
 
 });
