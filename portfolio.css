@@ -105,7 +105,7 @@ body {
 	height:40px;
 	background:none;
 	z-index: 25;
-	left:47.8%;
+	left:48.2%;
 	bottom:35%;
 	font-size:18px;
 }
@@ -138,11 +138,10 @@ body {
 	position: absolute;
 	right:70px;
 	bottom:50px;
-	font-size:18px;
+	font-size:20px;
 }
 
 .contact-box {
-	font-size:18px;
 	color:#fff;
 	position: absolute;
 	right:40px;

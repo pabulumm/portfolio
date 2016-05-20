@@ -81,15 +81,20 @@ $(function() {
 		console.log('Clicked CLOSE SKILLS button');
 		hideSkills();
 
-		$('#skills-select').fadeOut(500);
+		$('#skills-select').fadeOut(100);
 		$('#skills-container').animate({
-			height: "40px",
-			width: "70px",
-			left: "+=115px",
-			bottom: "+=130px"},
+			height: "0px",
+			width: "0px",
+			left: "+=135px",
+			bottom: "+=165px"},
 			1000, function() {
-				$('#skills-container').removeClass('skills-open');
-				$('#skills-select').fadeIn(100);
+				$('#skills-container').removeClass('skills-open').css({
+					height: "40px",
+					width: "70px",
+					left: "-=20px",
+					bottom: "-=35px"																
+				});
+				$('#skills-select').delay(500).fadeIn(1000);
 		});
 	});
 
