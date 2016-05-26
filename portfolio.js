@@ -22,6 +22,45 @@ function loadWorkPage() {
 }
 
 
+function closeSkills() {
+	hideSkills();
+
+	$('#skills-select').fadeOut(100);
+	$('#skills-container').animate({
+		height: "0px",
+		width: "0px",
+		left: "+=150px",
+		bottom: "+=160px"},
+		1000, function() {
+			$('#skills-container').removeClass('skills-open').css({
+				height: "50px",
+				width: "80px",
+				left: "-=40px",
+				bottom: "-=35px"																
+			});
+			$('#skills-select').delay(500).fadeIn(1000);
+	});
+
+}
+
+function openSkills() {
+	$('#skills-container').addClass('skills-open'); //.addClass('rotating');
+	$('#skills-select').fadeOut(500);
+	$('#skills-container').animate({
+		height: "300px",
+		width: "300px",
+		left: "-=110px",
+		bottom: "-=125px"},
+		1300, function() {
+			$('#close-skills').fadeIn(500);
+			// $('#skills-container').removeClass('rotating');
+			for (i = 1; i< 5; i++) {
+				$('#skill-wrap'+i).fadeIn(i*500);
+			}
+	});
+}
+
+
 $(function() {
 
 	// content hiding and fades
@@ -31,6 +70,7 @@ $(function() {
 
 	// switch view when work is selected.
 	$('#work-select').click(function() {
+		closeSkills();
 		loadWorkPage();
 		console.log('Clicked WORK link');
 		$('#work-content').show();
@@ -61,41 +101,12 @@ $(function() {
 
 	$('#skills-select').click(function() {
 		console.log('Clicked SKILLS button');
-		$('#skills-container').addClass('skills-open').addClass('rotating');
-		$('#skills-select').fadeOut(500);
-		$('#skills-container').animate({
-			height: "300px",
-			width: "300px",
-			left: "-=110px",
-			bottom: "-=125px"},
-			1300, function() {
-				$('#close-skills').fadeIn(500);
-				$('#skills-container').removeClass('rotating');
-				for (i = 1; i< 5; i++) {
-					$('#skill-wrap'+i).fadeIn(i*500);
-				}
-		});
+		openSkills();
 	})
 
 	$('#close-skills').click(function() {
 		console.log('Clicked CLOSE SKILLS button');
-		hideSkills();
-
-		$('#skills-select').fadeOut(100);
-		$('#skills-container').animate({
-			height: "0px",
-			width: "0px",
-			left: "+=130px",
-			bottom: "+=160px"},
-			1000, function() {
-				$('#skills-container').removeClass('skills-open').css({
-					height: "50px",
-					width: "80px",
-					left: "-=20px",
-					bottom: "-=35px"																
-				});
-				$('#skills-select').delay(500).fadeIn(1000);
-		});
+		closeSkills();
 	});
 
 	$('.contact').click(function() {
