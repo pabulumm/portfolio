@@ -9,9 +9,8 @@ body {
 	position:absolute;
 	width:100%;
 	height:100%;
-	background-image: url('panamint-stars-fade.png');
+	background-image: url('panamint-stars-fade-v2.png');
 	background-size: cover;
-	overflow: hidden;
 	font: "Roboto" sans-serif;
 	font-size:26px;
 	padding-left: 20%;

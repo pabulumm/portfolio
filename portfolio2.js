@@ -17,6 +17,7 @@ function loadAboutPage() {
 	$('#skills-select').hide().delay(3000).fadeIn(2000);
 	$('.contact').hide().delay(3000).fadeIn(2000);
 	$('.contact-box').hide();
+	$('#scroll-arrow').hide().delay(3000).fadeIn(2000);
 	hideSkills();
 }
 
@@ -127,6 +128,8 @@ $(function() {
 	setInterval(function() {
 		bounceArrow();
 	}, 2000);
+
+
 })
 
 
