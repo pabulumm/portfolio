@@ -34,6 +34,60 @@ function retract(selector) {
 		});
 }
 
+function initSkillItems() {
+	$('.skill-item').each(function() {
+		$(this).addClass('skill-item-hidden');
+	});
+}
+
+function slideInChildren(selector) {
+	$(selector).children('.skill-item').each (function() {
+		$(this).removeClass('skill-item-hidden');
+	});
+}
+
+function slideOutChildren(selector) {
+
+}
+
+// FOR USE WITH HTML5 CANVAS
+function drawSkillsDiagram() {
+	var c=document.getElementById("myCanvas");
+	var ctx=c.getContext("2d");
+	var thickness=50;
+	var ctx_x = 100;
+	var ctx_y = 75;
+	var ctx_radius = 75;
+
+	// upper left quad
+	ctx.beginPath();
+	ctx.arc(ctx_x,ctx_y,ctx_radius,Math.PI/2,Math.PI);
+	ctx.strokeStyle="blue"
+	ctx.lineWidth=thickness;
+	ctx.stroke();
+
+	// upper right quad
+	ctx.beginPath();
+	ctx.arc(ctx_x,ctx_y,ctx_radius,0,Math.PI/2);
+	ctx.strokeStyle="green"
+	ctx.lineWidth=thickness;
+	ctx.stroke();
+
+	// lower left quad
+	ctx.beginPath();
+	ctx.arc(ctx_x,ctx_y,ctx_radius,Math.PI,3*Math.PI/2);
+	ctx.strokeStyle="red"
+	ctx.lineWidth=thickness;
+	ctx.stroke();
+
+	// lower right quad
+	ctx.beginPath();
+	ctx.arc(ctx_x,ctx_y,ctx_radius,3*Math.PI/2,2*Math.PI);
+	ctx.strokeStyle="black"
+	ctx.lineWidth=thickness;
+	ctx.stroke();
+}
+
 
 $(function() {
 
@@ -89,7 +143,21 @@ $(function() {
 			$(this).addClass('extended');
 			extend(this);
 		}
-	})
+	});
+	initSkillItems();
+	// drawSkillsDiagram();
+
+	$('#skill-content').hover(function() {
+		$('.skill-item').each(function() {
+			$(this).removeClass('skill-item-hidden');
+		});
+	}, function() {
+		$('.skill-item').each(function() {
+			$(this).addClass('skill-item-hidden');
+		});
+	});
+
+	// slideInChildren('.skill-category');
 
 })
 

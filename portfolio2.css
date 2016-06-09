@@ -11,6 +11,8 @@ body {
 	width:100%;
 	overflow:hidden;
 	font: "Roboto" sans-serif;
+	background-image: url('panamint-stars-fade-v2.png');
+	background-size: cover;
 }
 
 .scroll-container {
@@ -43,30 +45,11 @@ body {
 	color:#ffffff;
 }
 
-#skill-content {
-	position: absolute;
-	top:200%;
-	bottom:-200%;
-	height: 100%;
-	width:100%;
-	background-image: url('panamint-stars-fade-v2.png');
-	background-size: cover;
-
-}
-
-#skill-content p {
-	padding-left:40%;
-	padding-right:40%;
-	color:#ffffff;
-
-}
 
 #about-content {
 	position:absolute;
 	width:100%;
 	height:100%;
-	background-image: url('panamint-stars-fade-v2.png');
-	background-size: cover;
 	font-size:26px;
 	padding-left: 20%;
 }
@@ -77,10 +60,17 @@ body {
 	bottom:-100%;
 	width:100%;
 	height:100%;
-	background-image: url('bg2v3.png');
-	background-size: cover;
 	overflow: hidden;
 	font-size:26px;
+}
+
+#skill-content {
+	position: absolute;
+	top:200%;
+	bottom:-200%;
+	height: 100%;
+	width:100%;
+
 }
 
 #side-tag h1 {
@@ -181,7 +171,7 @@ body {
 
 
 .contact {
-	position: absolute;
+	position: fixed;
 	right:70px;
 	bottom:50px;
 	font-size:30px;
@@ -189,7 +179,7 @@ body {
 
 .contact-box {
 	color:#fff;
-	position: absolute;
+	position: fixed;
 	right:40px;
 	bottom:50px;
 	z-index: 100;
@@ -209,4 +199,77 @@ body {
 	bottom:0;
 	left:50%;
 	color:#ffffff;
+}
+
+
+#skill-content canvas {
+	width:600px; 
+	height:300px;
+	border:1px solid #d3d3d3;
+	margin-top: 20%;
+	margin-left:40%;
+}
+
+.skill-category {
+	position:relative;
+	height:275px;
+	width:100%;
+	padding-right:10%;
+	text-align: center;
+}
+
+.skill-category-title {
+	float:right;
+	width:226px;
+	height:226px;
+	text-align:center;
+	border-radius: 113px;
+	background: #0f0f0f;
+	font-size:40px;
+	color:#ffffff;
+	padding-top:60px;
+}
+
+.skill-item {
+	position:relative;
+	height:176px;
+	width:176px;
+	color: #ffffff;
+	background:#000000;
+	border-radius: 88px;
+	padding-top: 70px;
+	font-size: 22px;
+	display: inline-block;
+	float:right;
+	margin-right:20px;
+	margin-top:25px;
+
+}
+
+.skill-item-hidden {
+	position:absolute;
+	left:-100%;
+}
+
+#neigbors-button-link {
+	float:right;
+	border:none;
+	border-radius:5px;
+	text-align: center;
+	padding-top:20px;
+	font-size:22px;
+	text-decoration: none;
+	background-color: #108ed1;
+}
+
+#neighbors-link {
+	position:relative;
+	float: right;
+	height:60px;
+	width:150px;
+	font-size:22px;
+}
+.btn a {
+	text-decoration: none;
+	color: #ffffff;
 }
