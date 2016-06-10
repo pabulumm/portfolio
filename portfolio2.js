@@ -9,16 +9,16 @@ function bounceArrow() {
 }
 
 function loadAboutPage() {
-	$('#name-container').hide().delay(1000).fadeIn(2000);
-	$('#about-container').hide().delay(2000).fadeIn(2000);
-	$('.contact').hide().delay(2000).fadeIn(2000);
+	$('#name-container').hide().delay(500).fadeIn(1500);
+	$('#about-container').hide().delay(1000).fadeIn(1500);
+	$('.contact').hide().delay(1500).fadeIn(1500);
 	$('.contact-box').hide();
-	$('#scroll-arrow').hide().delay(2000).fadeIn(2000);
+	$('#scroll-arrow').hide().delay(1500).fadeIn(1500);
 }
 
 function extend(selector) {
 	$(selector).animate({
-		"width": "1400px"},
+		"width": "90%"},
 		"slow", function() {
 			$(this).children('.work-display-text').show();
 			$(this).children('.work-display-image').show();
@@ -159,7 +159,7 @@ $(function() {
 			// $(this).removeClass('skill-item-hidden');
 			$(this).animate({
 				"right": "150%"},
-				"fast", function() {
+				250, function() {
 					$(this).addClass('skill-item-hidden');
 			});
 		}).delay(500);
@@ -178,7 +178,7 @@ $(function() {
 			// $(this).removeClass('skill-item-hidden');
 			$(this).animate({
 				"right": "150%"},
-				"fast", function() {
+				250, function() {
 					$(this).addClass('skill-item-hidden');
 			});
 		});
@@ -197,7 +197,7 @@ $(function() {
 			// $(this).removeClass('skill-item-hidden');
 			$(this).animate({
 				"right": "150%"},
-				"fast", function() {
+				250, function() {
 					$(this).addClass('skill-item-hidden');
 			});
 		});
