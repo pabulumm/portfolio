@@ -160,9 +160,9 @@ body {
 	margin-top:-10px;
 	margin-left:-10px;
 	border-radius:120px;
-	background: #DD9454;
+	background: #108ed1;
 	text-align: center;
-	padding:70px 20px 0 20px;
+	padding:55px 20px 0 20px;
 	font-size:40px;
 	color: #ffffff;
 	z-index:80;
@@ -284,7 +284,7 @@ body {
 
 #bug-info {
 	position: fixed;
-	width:350px;
+	width:370px;
 	height:auto;
 	top:10px;
 	left:10px;
@@ -292,6 +292,17 @@ body {
 	border-radius:5px;
 	color:#ff1500;
 	padding-left:5px;
+	padding-top:5px;
+}
+
+#bug-info p {
+	position:relative;
+	width:92%;
+	float:right;
+}
+
+#bug-info span {
+	margin-top:12px;
 }
 
 .contact {

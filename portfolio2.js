@@ -203,23 +203,9 @@ $(function() {
 		});
 	});
 
-	// $('#skill-content').hover(function() {
-	// 	$('.skill-item').each(function() {
-	// 		// $(this).removeClass('skill-item-hidden');
-	// 		$(this).animate({
-	// 			"marginRight": "20px"},
-	// 			1000, function() {
-	// 			/* stuff to do after animation is complete */
-	// 		});
-	// 	});
-	// }, function() {
-	// 	$('.skill-item').each(function() {
-	// 		$(this).addClass('skill-item-hidden');
-	// 	});
-	// });
-
-	// slideInChildren('.skill-category');
-
+	$('#bug-info span').click(function() {
+		$('#bug-info').hide();
+	})
 })
 
 
