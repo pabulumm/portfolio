@@ -1,18 +1,25 @@
-
+@import url(https://fonts.googleapis.com/css?family=Roboto::;00);
 
 
 body {
 	/*color: #435154;*/
 }
 
-#content {
+#content-container {
 	position:absolute;
-	height: 100%;
+	height:100%;
 	width:100%;
 	overflow:hidden;
-	font-family: sans-serif;
-	background-image: url('panamint-stars-fade-v2.png');
-	background-size: cover;
+
+}
+
+#content {
+	position:relative;
+	height: 3240px;
+	width:100%;
+	font: "Roboto" sans-serif;
+	background-image: url('3-tier-backdrop-v1.png');
+	/*background-size: cover;*/
 }
 
 .scroll-container {
@@ -37,7 +44,7 @@ body {
     width:20px;
     height:20px;
 	position: absolute;
-	bottom:300px;
+	bottom:100px;
 	left:50px;
 	font-size:60px;
 	letter-spacing: 0.2em;
@@ -45,40 +52,53 @@ body {
 	color:#ffffff;
 }
 
-
 #about-content {
 	position:absolute;
 	width:100%;
-	height:100%;
+	height:1080px;
+	background: transparent;
 	font-size:26px;
 	padding-left: 20%;
 }
 
 #work-content {
 	position:absolute;
-	top:200%;
-	bottom:-200%;
+	top:1080px;
+	bottom:-1080px;
 	width:100%;
-	height:100%;
+	height:1080px;
+	background: transparent;
 	overflow: hidden;
 	font-size:26px;
 }
 
 #skill-content {
 	position: absolute;
-	top:100%;
-	bottom:-100%;
-	height: 100%;
+	top:2160px;
+	bottom:-2160px;
+	height: 1080px;
 	width:100%;
+	background: transparent;
+/*	background-image: url('panamint-stars-fade-v2.png');
+	background-size: cover;
+*/
+}
+
+#skill-content p {
+	padding-left:40%;
+	padding-right:40%;
+	color:#ffffff;
 
 }
 
 #side-tag h1 {
 	position: absolute;
+	bottom:100px;
+	left:50px;
 	font-size:60px;
 	letter-spacing: 0.2em;
 	font-weight: 800;
-	color:#ffffff;
+	color:#108ed1;
 }
 
 #name {
@@ -147,10 +167,8 @@ body {
 .work-display-image {
 	position:relative;
 	float:right;
-	padding-right:60px;
+	padding-right:50px;
 	padding-top:20px;
-	border-radius:10px;
-	overflow:hidden;
 }
 
 .color-container {
@@ -195,114 +213,8 @@ body {
 
 #scroll-arrow {
 	position:absolute;
-	top:95%;
+	top:90%;
 	bottom:0;
 	left:50%;
-	color:#ffffff;
-}
-
-
-#skill-content canvas {
-	width:600px; 
-	height:300px;
-	border:1px solid #d3d3d3;
-	margin-top: 20%;
-	margin-left:40%;
-}
-
-.skill-category {
-	position:relative;
-	height:275px;
-	margin-left:10%;
-	width:80%;
-	text-align: center;
-}
-
-.skill-category-title {
-	position:absolute;
-	width:226px;
-	height:226px;
-	top:60;
-	right:0;
-	text-align:center;
-	border-radius: 113px;
-	background: #0f0f0f;
-	font-size:40px;
-	background:#ffffff;
-	padding-top:60px;
-}
-
-.skill-item-container {
-	position: relative;
-	height: 80%;
-	width: 100%;
-	float:left;
-}
-
-.skill-item {
-	position:absolute;
-	height:176px;
-	width:176px;
-	color: #ffffff;
-	background:#000000;
-	border-radius: 88px;
-	padding-top: 70px;
-	font-size: 22px;
-	display: inline-block;
-	float:right;
-	right:2000px;
-	margin-top:25px;
-
-}
-
-.skill-item-hidden {
-	visibility: hidden;
-	display:none;
-}
-
-#neigbors-button-link {
-	float:right;
-	border:none;
-	border-radius:5px;
-	text-align: center;
-	padding-top:20px;
-	font-size:22px;
-	text-decoration: none;
-	background-color: #108ed1;
-}
-
-#neighbors-link {
-	position:relative;
-	float: right;
-	height:60px;
-	width:150px;
-	font-size:22px;
-}
-.btn a {
-	text-decoration: none;
-	color: #ffffff;
-}
-
-#prog-lang-title {
-	color:#bd3d3d;
-}
-
-#app-dev-title {
-	color:#23db73;
-}
-
-#design-title {
-	 color:#108ed1;
-}
-
-#prog-lang .skill-item {
-	background:#bd3d3d;
-}
-
-#app-dev .skill-item {
-	background:#23db73;
-}
-
-#design .skill-item {
-	background:#108ed1;
+	color:#108ed1;
 }

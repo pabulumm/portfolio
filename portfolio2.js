@@ -1,5 +1,5 @@
 function bounceArrow() {
-$("#scroll-arrow").animate({
+	$("#scroll-arrow").animate({
 	"top": "-=50px",
 	"bottom": "+=50px"},
 	1000).animate({
@@ -112,7 +112,7 @@ $(function() {
 		bounceArrow();
 	}, 2000);
 
-	$('#work-content').hover(function() {
+	$('#skill-content').hover(function() {
 		clearInterval(bouncing);
 		// $('#scroll-arrow').hide();
 	})
@@ -145,17 +145,78 @@ $(function() {
 		}
 	});
 	initSkillItems();
-	// drawSkillsDiagram();
 
-	$('#skill-content').hover(function() {
-		$('.skill-item').each(function() {
-			$(this).removeClass('skill-item-hidden');
+	$('#prog-lang').hover(function() {
+		$('#prog-skills').children('.skill-item').each(function(index) {
+			$(this).delay(100*index).removeClass('skill-item-hidden').animate({
+				"right": 250+index*200+"px"},
+				500, function() {
+				/* stuff to do after animation is complete */
+			});
 		});
 	}, function() {
-		$('.skill-item').each(function() {
-			$(this).addClass('skill-item-hidden');
+		$('#prog-skills').children('.skill-item').each(function() {
+			// $(this).removeClass('skill-item-hidden');
+			$(this).animate({
+				"right": "150%"},
+				"fast", function() {
+					$(this).addClass('skill-item-hidden');
+			});
+		}).delay(500);
+	});
+
+	$('#app-dev').hover(function() {
+		$('#app-skills').children('.skill-item').each(function(index) {
+			$(this).delay(100*index).removeClass('skill-item-hidden').animate({
+				"right": 250+index*200+"px"},
+				500, function() {
+				/* stuff to do after animation is complete */
+			});
+		});
+	}, function() {
+		$('#app-skills').children('.skill-item').each(function() {
+			// $(this).removeClass('skill-item-hidden');
+			$(this).animate({
+				"right": "150%"},
+				"fast", function() {
+					$(this).addClass('skill-item-hidden');
+			});
 		});
 	});
+
+	$('#design').hover(function() {
+		$('#des-skills').children('.skill-item').each(function(index) {
+			$(this).delay(100*index).removeClass('skill-item-hidden').animate({
+				"right": 250+index*200+"px"},
+				500, function() {
+				/* stuff to do after animation is complete */
+			});
+		});
+	}, function() {
+		$('#des-skills').children('.skill-item').each(function() {
+			// $(this).removeClass('skill-item-hidden');
+			$(this).animate({
+				"right": "150%"},
+				"fast", function() {
+					$(this).addClass('skill-item-hidden');
+			});
+		});
+	});
+
+	// $('#skill-content').hover(function() {
+	// 	$('.skill-item').each(function() {
+	// 		// $(this).removeClass('skill-item-hidden');
+	// 		$(this).animate({
+	// 			"marginRight": "20px"},
+	// 			1000, function() {
+	// 			/* stuff to do after animation is complete */
+	// 		});
+	// 	});
+	// }, function() {
+	// 	$('.skill-item').each(function() {
+	// 		$(this).addClass('skill-item-hidden');
+	// 	});
+	// });
 
 	// slideInChildren('.skill-category');
 
