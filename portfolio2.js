@@ -89,6 +89,39 @@ function drawSkillsDiagram() {
 }
 
 
+
+var skill_init_padding, skill_spacing;
+
+function formatPage() {
+	var win_width = $(window).width();
+	console.log("Current window width: " + win_width);
+	if (win_width > 1650) { 
+		skill_init_padding = 250;
+		skill_spacing = 200;
+	}
+	else if (win_width > 1550) {
+		skill_init_padding = 230;
+		skill_spacing = 180;
+	}
+	else if (win_width > 1450) {
+		skill_init_padding = 210;
+		skill_spacing = 160;
+	}
+	else if (win_width > 1250) {
+		skill_init_padding = 200;
+		skill_spacing = 140;
+	}
+	else if (win_width > 1000) {
+		skill_init_padding = 250;
+		skill_spacing = 130;
+	}
+	else {
+		skill_init_padding = 250;
+		skill_spacing = 200;
+	}
+}
+
+
 $(function() {
 
 	// content hiding and fades
@@ -115,7 +148,14 @@ $(function() {
 	$('#skill-content').hover(function() {
 		clearInterval(bouncing);
 		// $('#scroll-arrow').hide();
-	})
+	});
+
+	// window formatting
+	formatPage();
+	$(window).resize(function() {
+		formatPage();
+	});
+	
 
 
 	// WORK DISPLAY HOVER FUNCTION - extends and retracts the div
@@ -149,7 +189,7 @@ $(function() {
 	$('#prog-lang').hover(function() {
 		$('#prog-skills').children('.skill-item').each(function(index) {
 			$(this).delay(100*index).removeClass('skill-item-hidden').animate({
-				"right": 250+index*200+"px"},
+				"right": skill_init_padding+index*skill_spacing+"px"},
 				500, function() {
 				/* stuff to do after animation is complete */
 			});
@@ -168,7 +208,7 @@ $(function() {
 	$('#app-dev').hover(function() {
 		$('#app-skills').children('.skill-item').each(function(index) {
 			$(this).delay(100*index).removeClass('skill-item-hidden').animate({
-				"right": 250+index*200+"px"},
+				"right": skill_init_padding+index*skill_spacing+"px"},
 				500, function() {
 				/* stuff to do after animation is complete */
 			});
@@ -187,7 +227,7 @@ $(function() {
 	$('#design').hover(function() {
 		$('#des-skills').children('.skill-item').each(function(index) {
 			$(this).delay(100*index).removeClass('skill-item-hidden').animate({
-				"right": 250+index*200+"px"},
+				"right": skill_init_padding+index*skill_spacing+"px"},
 				500, function() {
 				/* stuff to do after animation is complete */
 			});
